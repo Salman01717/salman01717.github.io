@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic and professional portfolio of Engr. Dr. A. B. M. Salman Rahman.">
+<title>Engr. Dr. A. B. M. Salman Rahman | Academic & Professional Portfolio</title>
+
+<style>
+:root{
+  --navy:#092746;--navy2:#123d63;--blue:#1769d1;--ice:#eef6ff;
+  --bg:#f7faff;--white:#fff;--text:#18324c;--muted:#64798f;
+  --line:#dce7f1;--shadow:0 14px 40px rgba(9,39,70,.08);
+  --radius:20px;--max:1180px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:82px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+section{padding:82px 0}
+.alt{background:#f0f6fc}
+.kicker{margin:0 0 8px;color:#2a83e8;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+h1,h2,h3{line-height:1.15}
+h2{margin:0;color:var(--navy);font-size:clamp(32px,5vw,50px);letter-spacing:-.035em}
+.intro{max-width:880px;margin:16px 0 38px;color:var(--muted);font-size:16px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;color:var(--navy);white-space:nowrap}.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:15px;flex-wrap:wrap;justify-content:flex-end}
+.navlinks a{font-size:11px;font-weight:800;color:#526b83}.navlinks a:hover{color:var(--blue)}
+.hero{padding:105px 0;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(23,105,209,.16),transparent 35%),linear-gradient(135deg,#fff,#eaf4ff)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.hero h1{margin:0;color:#fff;font-size:clamp(42px,6vw,72px);letter-spacing:-.05em}.hero h1 span{color:#8fd4ff}
+.hero-sub{max-width:760px;margin:22px 0;color:#dcecff;font-size:19px}
+.tags{display:flex;gap:9px;flex-wrap:wrap}.tag{padding:7px 12px;border:1px solid #cbdced;border-radius:999px;background:#fff;font-size:11px;font-weight:800;color:var(--navy2)}
+.panel{padding:28px;background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 14px;color:var(--navy)}
+.stat{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.stat:last-child{border:0}.stat b{color:var(--navy)}.stat span{color:var(--muted);text-align:right}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+.timeline{display:grid;gap:16px}.timeline-item{display:grid;grid-template-columns:165px 1fr;gap:25px;padding:25px;background:#fff;border:1px solid var(--line);border-radius:17px}.date{color:var(--blue);font-size:12px;font-weight:900}.timeline-item h3{margin:0;color:var(--navy);font-size:20px}.timeline-item h4{margin:4px 0 8px;color:#557089;font-size:14px}.timeline-item p{margin:0;color:var(--muted);font-size:13px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:var(--shadow)}.project .num{color:var(--blue);font-weight:900;font-size:11px}.project h3{margin:6px 0;color:var(--navy);font-size:19px}.project p{margin:0;color:var(--muted);font-size:13px}.project .id{display:inline-block;margin-top:12px;padding:5px 9px;background:var(--ice);border-radius:7px;color:var(--navy2);font-size:11px;font-weight:800}
+.pub-list{display:grid;gap:12px}.pub{padding:20px 23px;background:#fff;border:1px solid var(--line);border-radius:15px}.pub strong{display:block;color:var(--navy);font-size:14px}.pub span{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+.conf{padding:20px;background:#fff;border:1px solid var(--line);border-radius:15px}.conf h3{margin:0;color:var(--navy);font-size:16px}.conf p{margin:6px 0 0;color:var(--muted);font-size:12px}
+.award{padding:23px;background:linear-gradient(145deg,#fff,#f1f7fd);border:1px solid var(--line);border-radius:17px}.award h3{margin:0 0 7px;color:var(--navy);font-size:17px}.award p{margin:0;color:var(--muted);font-size:12px}
+.reviewer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.reviewer{background:#fff;border:1px solid var(--line);border-radius:19px;padding:25px;box-shadow:var(--shadow)}.rnum{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:50%;background:var(--ice);color:var(--blue);font-size:11px;font-weight:900}.reviewer h3{margin:16px 0 3px;color:var(--navy);font-size:19px}.publisher{margin:0 0 12px;color:#57718a;font-size:12px;font-weight:800}.reviewer p{margin:0;color:var(--muted);font-size:12px}.reviewer details{margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}summary{cursor:pointer;color:var(--blue);font-weight:850;font-size:12px}.reviewer ul{color:var(--muted);font-size:12px;padding-left:18px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px}.meta div{padding:9px;background:#f5f8fc;border-radius:9px}.meta small{display:block;color:#8798aa;text-transform:uppercase;font-size:9px;font-weight:900}.meta b{color:var(--navy);font-size:11px}
+.training{display:grid;gap:12px}.train{display:flex;justify-content:space-between;gap:20px;padding:18px 21px;background:#fff;border:1px solid var(--line);border-radius:14px}.train b{color:var(--navy);font-size:13px}.train span{color:var(--muted);font-size:12px;text-align:right}
+.contact{background:var(--navy);color:#fff;border-radius:28px;padding:45px}.contact h2{color:#fff}.contact .intro{color:#b8cce0}.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.contact-item{padding:17px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px}.contact-item small{display:block;color:#9fc2e8;text-transform:uppercase;font-weight:900;font-size:9px;letter-spacing:.1em}.contact-item a,.contact-item span{display:block;margin-top:4px;color:#fff;font-size:13px;overflow-wrap:anywhere}.contact-item a:hover{color:#9fc2e8}
+footer{padding:25px;text-align:center;color:#71869b;font-size:11px}
+@media(max-width:1050px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr}.grid3,.reviewer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){section{padding:62px 0}.container{width:calc(100% - 28px)}.grid3,.grid2,.projects,.reviewer-grid,.contact-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:6px}.train{display:block}.train span{display:block;text-align:left;margin-top:5px}.contact{padding:28px 20px}.meta{grid-template-columns:1fr}}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.88) 55%,rgba(255,255,255,.35) 100%),url("assets/banner.png") center/cover no-repeat;z-index:0}.hero-grid{position:relative;z-index:1}.profile-photo{width:180px;height:180px;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 18px 45px rgba(9,39,70,.18);display:block;margin:0 auto 22px}.hero-grid aside{position:relative}.hero-grid aside:before{content:"";display:block;height:0}.photo-wrap{text-align:center;margin-bottom:10px}.photo-wrap img{width:145px;height:145px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow:0 12px 30px rgba(9,39,70,.14)}
+.hero .panel{background:rgba(255,255,255,.96)}
+.hero .kicker{color:#9cddff}
+.hero .tag{backdrop-filter:blur(8px)}
+#profiles .card{transition:transform .25s ease,box-shadow .25s ease}
+#profiles .card:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(9,39,70,.13)}
+
+/* ===== FINAL HERO REDESIGN ===== */
+.hero{
+  padding:0 0 72px;
+  background:#061d38;
+  overflow:visible;
+  position:relative;
+}
+.hero-banner{
+  width:100%;
+  background:#061d38;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.hero-banner img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:610px;
+  object-fit:cover;
+}
+.hero-profile{
+  position:relative;
+  z-index:3;
+  width:min(1080px,calc(100% - 40px));
+  margin:-76px auto 0;
+  display:grid;
+  grid-template-columns:210px 1fr 280px;
+  align-items:center;
+  gap:28px;
+  padding:28px 30px;
+  background:rgba(255,255,255,.98);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:24px;
+  box-shadow:0 24px 60px rgba(0,20,45,.28);
+}
+.hero-profile-photo{
+  width:175px;
+  height:175px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:20px;
+  border:5px solid #fff;
+  box-shadow:0 12px 35px rgba(5,35,65,.20);
+}
+.hero-profile-copy .kicker{color:#1769d1;margin-bottom:7px}
+.hero-profile-copy h1{
+  margin:0;
+  color:#092746;
+  font-size:clamp(28px,4vw,48px);
+  letter-spacing:-.04em;
+  line-height:1.05;
+}
+.hero-profile-copy h1 span{color:#1769d1}
+.hero-profile-copy p{
+  margin:12px 0 0;
+  color:#587089;
+  font-size:14px;
+  line-height:1.6;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.hero-tag{
+  display:inline-flex;
+  padding:6px 10px;
+  border:1px solid #d7e4f0;
+  border-radius:999px;
+  background:#f5f9fd;
+  color:#123d63;
+  font-size:10px;
+  font-weight:800;
+}
+.hero-snapshot{
+  padding:18px;
+  border-radius:17px;
+  background:#f3f8fd;
+  border:1px solid #dbe8f3;
+}
+.hero-snapshot h3{margin:0 0 10px;color:#092746;font-size:15px}
+.hero-snapshot .mini{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:8px 0;
+  border-bottom:1px solid #dbe5ee;
+  font-size:10px;
+}
+.hero-snapshot .mini:last-child{border-bottom:0}
+.hero-snapshot b{color:#092746}
+.hero-snapshot span{color:#5f768d;text-align:right}
+@media(max-width:900px){
+  .hero-profile{grid-template-columns:150px 1fr;margin-top:-55px}
+  .hero-profile-photo{width:140px;height:140px}
+  .hero-snapshot{grid-column:1/-1}
+}
+@media(max-width:620px){
+  .hero{padding-bottom:45px}
+  .hero-banner img{min-height:210px;object-fit:cover;object-position:center}
+  .hero-profile{
+    width:calc(100% - 24px);
+    margin:-35px auto 0;
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:22px 18px;
+  }
+  .hero-profile-photo{width:130px;height:130px;margin:auto}
+  .hero-tags{justify-content:center}
+  .hero-profile-copy h1{font-size:30px}
+  .hero-snapshot{text-align:left}
+}
+
+
+/* Mobile + laptop polish */
+.nav-toggle{
+  display:none;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--navy);
+  border-radius:10px;
+  padding:9px 12px;
+  font-weight:800;
+  cursor:pointer;
+}
+img{max-width:100%}
+.hero-banner img{display:block;width:100%;height:auto;object-fit:cover}
+.hero-profile-photo{object-fit:cover}
+@media(max-width:1050px){
+  .nav-toggle{display:block}
+  .nav{position:relative}
+  .navlinks{
+    display:none;
+    position:absolute;
+    left:14px;
+    right:14px;
+    top:62px;
+    max-height:70vh;
+    overflow:auto;
+    padding:12px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    flex-direction:column;
+    gap:4px;
+  }
+  .navlinks.open{display:flex}
+  .navlinks a{padding:10px 8px;font-size:12px}
+}
+@media(max-width:700px){
+  body{font-size:15px}
+  .logo{font-size:14px}
+  .hero-banner img{min-height:150px;object-fit:cover}
+  .hero-profile{width:calc(100% - 20px)!important}
+  h2{font-size:34px}
+  .intro{font-size:15px}
+  .card,.reviewer,.project{padding:21px}
+  .timeline-item{padding:20px}
+  .contact{border-radius:20px}
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">ABM Salman <span>Rahman</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open website sections">☰ Sections</button>
+      <nav class="navlinks">
+      <a href="#about">01 About Me</a>
+      <a href="#focus">02 Professional Focus</a>
+      <a href="#education">03 Education</a>
+      <a href="#experience">04 Professional Experience</a>
+      <a href="#domain">05 Research Domain</a>
+      <a href="#portfolio">06 Research Portfolio</a>
+      <a href="#publications">07 Publications</a>
+      <a href="#conferences">08 Attended Conferences</a>
+      <a href="#awards">09 Awards & Achievements</a>
+      <a href="#membership">10 Affiliations</a>
+      <a href="#reviewer">11 Reviewer Role</a>
+      <a href="#training">12 Certifications</a>
+      <a href="#contact">13 Contact</a>
+      <a href="#profiles">14 Academic Profiles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-banner">
+    <img loading="eager" decoding="async" alt="Academic and professional banner" src="assets/banner.png" alt="Engr. Dr. A. B. M. Salman Rahman — Global Technology Leadership Banner">
+  </div>
+
+  <div class="hero-profile">
+    <img class="hero-profile-photo"
+         src="assets/profile.png"
+         alt="Professional portrait of Engr. Dr. A. B. M. Salman Rahman">
+
+    <div class="hero-profile-copy">
+      <p class="kicker">Academic & Professional Portfolio</p>
+      <h1>Engr. Dr. A. B. M. <span>Salman Rahman</span></h1>
+      <p>
+        Senior Project Manager · Ph.D. in Information & Communication Engineering ·
+        Researcher · Technology & Innovation Leader
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Machine Learning</span>
+        <span class="hero-tag">Smart Factory</span>
+        <span class="hero-tag">Smart Agriculture</span>
+        <span class="hero-tag">Industrial IoT</span>
+        <span class="hero-tag">Project Management</span>
+      </div>
+    </div>
+
+    <aside class="hero-snapshot">
+      <h3>Professional Snapshot</h3>
+      <div class="mini"><b>Current Role</b><span>Senior Project Manager</span></div>
+      <div class="mini"><b>Doctoral Field</b><span>Information & Communication Engineering</span></div>
+      <div class="mini"><b>Institution</b><span>Sunchon National University</span></div>
+      <div class="mini"><b>Academic Service</b><span>International Journal Reviewer</span></div>
+    </aside>
+  </div>
+</section>
+
+<section id="about">
+<div class="container">
+<p class="kicker">01</p><h2>About Me</h2>
+<p class="intro">I am an engineer, researcher, academic, and technology professional with interdisciplinary experience spanning telecommunications infrastructure, Information and Communication Engineering, machine-learning-based analysis, smart systems, smart agriculture, smart manufacturing, IoT, environmental monitoring, and project management.</p>
+<div class="grid3">
+<article class="card"><h3>Engineering Foundation</h3><p>Built a professional foundation in Electronics and Telecommunication Engineering followed by field networking engineering experience.</p></article>
+<article class="card"><h3>Research & Academia</h3><p>Completed doctoral and master's study at Sunchon National University and developed research experience in intelligent, data-driven engineering systems.</p></article>
+<article class="card"><h3>Project Leadership</h3><p>Current professional work combines planning, resources, risk, budgets, vendors, teams, communication, feasibility and delivery management.</p></article>
+</div>
+</div>
+</section>
+
+<section class="alt" id="focus">
+<div class="container">
+<p class="kicker">02</p><h2>Professional Focus</h2>
+<p class="intro">Connecting engineering, research, intelligent technology and practical project execution.</p>
+<div class="grid3">
+<article class="card"><h3>Project Management</h3><p>Project planning, coordination, resources, schedules, budgets, risk, stakeholders, vendors, feasibility and delivery.</p></article>
+<article class="card"><h3>Technology & Innovation</h3><p>Data-driven problem solving, intelligent systems, ICT, industrial technology, smart systems and technology-enabled decision making.</p></article>
+<article class="card"><h3>Research Leadership</h3><p>Research development, machine learning, modeling, publications, academic collaboration, mentoring and peer review.</p></article>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+<p class="kicker">03</p><h2>Education</h2>
+<p class="intro">Academic preparation in Information and Communication Engineering and Electronics & Telecommunication Engineering.</p>
+<div class="timeline">
+<article class="timeline-item"><div class="date">February 2022</div><div><h3>Ph.D. / Integrated Doctoral of Engineering</h3><h4>Sunchon National University, Suncheon, Republic of Korea</h4><p>Information and Communication Engineering. Dissertation: <b>A Study on Energy Consumption Models Based on Machine Learning for Smart Factory.</b> Supervisor: Prof. Changsun Shin.</p></div></article>
+<article class="timeline-item"><div class="date">February 2022</div><div><h3>Master of Science and Engineering</h3><h4>Sunchon National University, Suncheon, Republic of Korea</h4><p>Information and Communication Engineering.</p></div></article>
+<article class="timeline-item"><div class="date">December 2015</div><div><h3>Bachelor of Science and Engineering</h3><h4>Southeast University, Dhaka, Bangladesh</h4><p>Electronics and Telecommunication Engineering.</p></div></article>
+</div>
+</div>
+</section>
+
+<section class="alt" id="experience">
+<div class="container">
+<p class="kicker">04</p><h2>Professional Experience</h2>
+<p class="intro">Engineering, academic research, university teaching and project leadership experience in Bangladesh and South Korea.</p>
+<div class="timeline">
+<article class="timeline-item"><div class="date">Oct 2022 – Present</div><div><h3>Senior Project Manager</h3><h4>Rose Mart International Limited, Bangladesh</h4><p>Directing project-unit activities; setting goals; identifying issues and solutions; resource planning; budgets; feasibility studies; vendor selection; communication and risk assessment; staff monitoring; recruitment; business-expansion support; industry-trend monitoring; and negotiation/litigation-related support.</p></div></article>
+<article class="timeline-item"><div class="date">Apr 2022 – Sep 2022</div><div><h3>Research Professor</h3><h4>Department of Information and Communication Engineering, Sunchon National University, South Korea</h4><p>Lecturing and tutoring; doctoral/master's thesis oversight; independent R&D; research-structure improvement; administration; database and project-framework design; student guidance and seminars.</p></div></article>
+<article class="timeline-item"><div class="date">Dec 2021 – Mar 2022</div><div><h3>Postdoctoral Research Fellow</h3><h4>Department of Information and Communication Engineering, Sunchon National University, South Korea</h4><p>Project handling; collaboration with technicians and visiting scientists; peer-reviewed publication; administration; mentoring Ph.D., graduate and undergraduate students; seminars and meetings.</p></div></article>
+<article class="timeline-item"><div class="date">Jun 2015 – Feb 2017</div><div><h3>Networking Engineer</h3><h4>LM Ericsson, Dhaka, Bangladesh</h4><p>Microwave installation and commissioning; transmission links; rectifiers; BTS/transmission/power maintenance; 2G/Node B PAT; alarm troubleshooting; VSWR/DTF testing; RBS 6000/2000; software upgrades; repeater maintenance; subcontractor supervision; 2G/3G testing.</p></div></article>
+</div>
+</div>
+</section>
+
+<section id="domain">
+<div class="container">
+<p class="kicker">05</p><h2>Research Domain</h2>
+<p class="intro">Research directions documented across doctoral work, projects, publications and interdisciplinary academic activity.</p>
+<div class="grid3">
+<article class="card"><h3>Big Data & Distributed Computing</h3><p>Large-scale data processing, distributed computing and analytical approaches.</p></article>
+<article class="card"><h3>Machine Learning & Deep Learning</h3><p>Machine learning, data mining, predictive modeling, regression and intelligent analysis.</p></article>
+<article class="card"><h3>Industrial IoT & IT Convergence</h3><p>Connected industrial systems, ICT convergence and technology-enabled intelligence.</p></article>
+<article class="card"><h3>Smart Factory & Energy Analytics</h3><p>Manufacturing data, energy consumption modeling, prediction and production analytics.</p></article>
+<article class="card"><h3>Smart Agriculture</h3><p>Smart bee farms, greenhouse energy, strawberry production and fruit-disease analysis.</p></article>
+<article class="card"><h3>Cloud & Ubiquitous Computing</h3><p>Cloud-oriented and ubiquitous computing concepts for intelligent ICT systems.</p></article>
+</div>
+</div>
+</section>
+
+<section class="alt" id="portfolio">
+<div class="container">
+<p class="kicker">06</p><h2>Research Portfolio</h2>
+<p class="intro">Documented research projects and programs associated with smart manufacturing, energy, agriculture, ICT and convergence research.</p>
+<div class="projects">
+<article class="project"><span class="num">RP-01</span><h3>KETEP — Energy Technology Research</h3><p>Korea Institute of Energy Technology Evaluation and Planning grant funded by the Korean government (MOTIE).</p><span class="id">Project 20202020900060</span></article>
+<article class="project"><span class="num">RP-02</span><h3>IITP / Grand ICT</h3><p>Grand Information Technology Research Center support program under the Institute for Information & Communications Technology Planning & Evaluation.</p><span class="id">IITP-2021-2020-0-01489</span></article>
+<article class="project"><span class="num">RP-03</span><h3>Smart Farm Innovation Technology</h3><p>Smart Farm Innovation Technology Development Program funded by MAFRA, RDA and MSIT.</p><span class="id">Project 421028-3</span></article>
+<article class="project"><span class="num">RP-04</span><h3>IT-Bio Convergence System</h3><p>Interdisciplinary Program in IT-Bio Convergence System, Sunchon National University.</p></article>
+<article class="project"><span class="num">RP-05</span><h3>Cooperative Agricultural Research</h3><p>Cooperative Research Program for Agriculture Science & Technology Development, Rural Development Administration.</p><span class="id">PJ01188605</span></article>
+<article class="project"><span class="num">RP-06</span><h3>Advanced Production Technology</h3><p>IPET Advanced Production Technology Development Program funded by MAFRA.</p><span class="id">315001-5</span></article>
+<article class="project"><span class="num">RP-07</span><h3>Renewable-Energy Fusion</h3><p>KETEP grant funded by the Korean government (MOTIE), focused on development and substantiation of a renewable energy fusion system for crops.</p><span class="id">20194210100230</span></article>
+</div>
+</div>
+</section>
+
+<section id="publications">
+<div class="container">
+<p class="kicker">07</p><h2>Publications</h2>
+<p class="intro">Documented publication record grouped by year. Bibliographic wording is retained from the supplied CV records.</p>
+<div class="pub-list">
+<article class="pub"><strong>A Comparative Study of Energy Big Data Analysis for Product Management in a Smart Factory</strong><span>Journal of Organizational and End User Computing — 2022</span></article>
+<article class="pub"><strong>A Study of the Modeling on the Smart Factory Production Optimization Using Energy Consumption Prediction</strong><span>International Journal of Advanced Science and Technology — 2022</span></article>
+<article class="pub"><strong>Artificial Intelligence-Based Quality Management and Detection System for Personalized Learning</strong><span>Journal of Interconnection Networks — 2022</span></article>
+<article class="pub"><strong>A Comparative Study Between Linear Regression and Support Vector Regression Model Based on Environmental Factors of a Smart Bee Farm</strong><span>Smart Media Journal — 2022</span></article>
+<article class="pub"><strong>Modeling the Smart Factory Manufacturing Products Characteristics: The Perspective of Energy Consumption</strong><span>Discrete Dynamics in Nature and Society — 2021</span></article>
+<article class="pub"><strong>Data-based Greenhouse Energy Management Model Study for Energy Independent Greenhouse</strong><span>Korean Society of Mechanical Engineers — 2021</span></article>
+<article class="pub"><strong>Identifying Best Fit Ecological Smart Bee Farm Based on Environmental Issues by Linear Regression Model</strong><span>Journal of Green Engineering — 2021</span></article>
+<article class="pub"><strong>Systematic Analysis of Environmental Issues on Ecological Smart Bee Farm by Linear Regression Model</strong><span>International Journal of Hybrid Information Technology — 2021</span></article>
+<article class="pub"><strong>A Prediction Model for Steel Factory Manufacturing Product Based on Energy Consumption Using Data Mining Technique</strong><span>Journal of Science and Engineering Management — 2020</span></article>
+<article class="pub"><strong>Identification of Corresponding Environmental Factors for Fruit Diseases</strong><span>International Journal of Engineering and Advanced Technology — 2020</span></article>
+<article class="pub"><strong>Identifying High Significance Input Factors in Strawberry Production using Linear Model</strong><span>International Journal of Innovative Technology and Exploring Engineering — 2020</span></article>
+<article class="pub"><strong>A Comparative Study Based on SVR for the Change of Strawberry Productions by the Variation of Nutrient Water Flow</strong><span>Journal of Knowledge Information Technology and Systems — 2019</span></article>
+<article class="pub"><strong>Identification of High Significance Product Items Through the Analysis of Energy Consumption in Steel Factory</strong><span>Journal of Knowledge Information Technology and Systems — 2019</span></article>
+<article class="pub"><strong>An Analysis Study Based on Linear Regression Model for Changes of Fruit Size over Plum Diseases</strong><span>Journal of Knowledge Information Technology and Systems — 2018</span></article>
+<article class="pub"><strong>Identification of Environmental Factors in Fruit Disease by Logistic Regression</strong><span>Journal of Knowledge Information Technology and Systems — 2018</span></article>
+</div>
+</div>
+</section>
+
+<section class="alt" id="conferences">
+<div class="container">
+<p class="kicker">08</p><h2>Attended Conferences</h2>
+<p class="intro">Documented conference presentations and scholarly dissemination activities.</p>
+<div class="grid2">
+<article class="conf"><h3>A Study on Smart Factory Manufacturing Products Characteristics based on Energy Consumption</h3><p>2021 4th Domestic and International Conference, Future Convergence Technology Research Society.</p></article>
+<article class="conf"><h3>Steel Factory Energy Consumption Prediction Based on Production</h3><p>2020 4th Domestic and International Conference, Future Convergence Technology Research Society.</p></article>
+<article class="conf"><h3>Systematic Analysis of Environmental Issues on Ecological Smart Bee Farm by Linear Regression Model</h3><p>2020 4th Domestic and International Conference, Future Convergence Technology Research Society.</p></article>
+<article class="conf"><h3>Using Machine Learning Algorithms for Fruit Disease Classification</h3><p>3rd International Workshop on Electrical and Electronics Engineering (IWEE 2020).</p></article>
+<article class="conf"><h3>A Method to Identify the High Significance Input Factors in Strawberry Growth and Production</h3><p>World IT Congress 2018.</p></article>
+<article class="conf"><h3>Identification of Corresponding Environmental Factors in Fruit Diseases using Neural Network Model</h3><p>International Conference on Smart Structures and Systems, Saveetha Engineering College, India, 2018.</p></article>
+</div>
+</div>
+</section>
+
+<section id="awards">
+<div class="container">
+<p class="kicker">09</p><h2>Awards and Achievements</h2>
+<p class="intro">Academic and research recognition documented in the supplied records.</p>
+<div class="grid3">
+<article class="award"><h3>President’s Research Excellence Award</h3><p>Sunchon National University, Republic of Korea.</p></article>
+<article class="award"><h3>Research Excellence Award</h3><p>Sunchon National University, Republic of Korea.</p></article>
+<article class="award"><h3>Best Presentation Award</h3><p>2021 4th Domestic and International Conference, Future Convergence Technology Research Society.</p></article>
+</div>
+</div>
+</section>
+
+<section class="alt" id="membership">
+<div class="container">
+<p class="kicker">10</p>
+<h2>Membership and Professional Affiliations</h2>
+<p class="intro">Professional, academic, conference-service, and community affiliations documented in my academic and professional records.</p>
+
+<div class="grid3">
+<article class="card">
+  <span class="rnum">01</span>
+  <h3 style="margin-top:14px;">APA</h3>
+  <p>Professional membership/service affiliation.</p>
+  <p style="margin-top:10px;color:#1769d1;font-weight:800;font-size:11px;">Professional Affiliation</p>
+</article>
+
+<article class="card">
+  <span class="rnum">02</span>
+  <h3 style="margin-top:14px;">EasyChair</h3>
+  <p>Academic conference and scholarly-review service affiliation.</p>
+  <p style="margin-top:10px;color:#1769d1;font-weight:800;font-size:11px;">Academic / Conference Service</p>
+</article>
+
+<article class="card">
+  <span class="rnum">03</span>
+  <h3 style="margin-top:14px;">Bangladeshi Students' Association in Korea (BSAK)</h3>
+  <p>Academic and community affiliation supporting engagement among Bangladeshi students and the Bangladeshi community in Korea.</p>
+  <p style="margin-top:10px;color:#1769d1;font-weight:800;font-size:11px;">Academic & Community Affiliation</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="reviewer">
+<div class="container">
+<p class="kicker">11</p><h2>Academic Reviewing</h2>
+<p class="intro">I contribute to the academic peer-review process by evaluating research manuscripts and providing constructive scholarly feedback to support research quality, rigor and scientific communication.</p>
+<div class="reviewer-grid">
+
+<article class="reviewer"><span class="rnum">01</span><h3>Expert Systems</h3><p class="publisher">Wiley</p><p>Academic peer-review service in artificial intelligence, knowledge engineering, intelligent systems and related computational applications.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for <em>Expert Systems</em>.</li><li>Contributed to scholarly evaluation of submitted research manuscripts.</li><li>Provided constructive feedback on research quality, technical contribution, methodology and presentation.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>Wiley</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">02</span><h3>Computational Intelligence</h3><p class="publisher">Wiley</p><p>Peer-review service covering artificial intelligence, machine learning, knowledge mining, data-driven methods and computational intelligence.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for <em>Computational Intelligence</em>.</li><li>Contributed to evaluation of research manuscripts.</li><li>Provided scholarly feedback on methodology, novelty, experiments and scientific clarity.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>Wiley</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">03</span><h3>Acta Geophysica</h3><p class="publisher">Springer</p><p>Scholarly reviewing service contributing to evaluation of interdisciplinary scientific research.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for <em>Acta Geophysica</em>.</li><li>Contributed to scholarly assessment of submitted manuscripts.</li><li>Provided constructive feedback supporting scientific rigor and clarity.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>Springer</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">04</span><h3>Journal of Electronic Imaging</h3><p class="publisher">SPIE</p><p>Peer-review contribution in electronic imaging, image processing, imaging systems and related engineering technologies.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for the <em>Journal of Electronic Imaging</em>.</li><li>Contributed to scholarly evaluation of research manuscripts.</li><li>Provided constructive feedback on technical quality, methodology, innovation and contribution.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>SPIE</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">05</span><h3>Current Psychology</h3><p class="publisher">Springer</p><p>Academic peer-review service supporting scholarly assessment of interdisciplinary research manuscripts.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for <em>Current Psychology</em>.</li><li>Contributed to scholarly evaluation of submitted manuscripts.</li><li>Provided constructive feedback supporting methodological quality, rigor and communication.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>Springer</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">06</span><h3>Image and Vision Computing</h3><p class="publisher">Elsevier</p><p>Peer-review contribution in image processing, computer vision, machine learning and visual computing.</p><details><summary>View details →</summary><ul><li>Served as an academic peer reviewer for <em>Image and Vision Computing</em>.</li><li>Contributed to scholarly evaluation of manuscripts in imaging and computer vision.</li><li>Provided constructive feedback on methodology, technical contribution and experimentation.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>Elsevier</b></div></div></details></article>
+
+<article class="reviewer"><span class="rnum">07</span><h3>Journal of Intelligent Systems</h3><p class="publisher">De Gruyter Brill | 2026</p><p>Recent peer-review service in intelligent systems and related interdisciplinary research.</p><details><summary>View details →</summary><ul><li>Served as a peer reviewer for <em>Journal of Intelligent Systems</em>.</li><li>Contributed to scholarly evaluation of research manuscripts.</li><li>Provided academic assessment and constructive feedback supporting research quality, rigor and publication standards.</li><li>Certificate of Reviewing issued <b>10 August 2026</b>.</li></ul><div class="meta"><div><small>Role</small><b>Academic Journal Reviewer</b></div><div><small>Publisher</small><b>De Gruyter Brill</b></div><div><small>Year</small><b>2026</b></div><div><small>Certificate</small><b>10 August 2026</b></div></div></details></article>
+
+</div>
+</div>
+</section>
+
+<section class="alt" id="training">
+<div class="container">
+<p class="kicker">12</p><h2>Certifications and Training</h2>
+<p class="intro">Research ethics, laboratory safety and professional development records documented in the supplied certificates and CV.</p>
+<div class="training">
+<div class="train"><b>Training of Researchers Related to Research on Human Subjects and Human-Derived Materials</b><span>2.5 hours — 04 August 2022</span></div>
+<div class="train"><b>Research Ethics for Researcher</b><span>Korea Institute of Human Resources Development in Science & Technology — December 2021</span></div>
+<div class="train"><b>Research Ethics for Graduate Students</b><span>Korea Institute of Human Resources Development in Science & Technology — March 2021</span></div>
+<div class="train"><b>Lab Safety Management System</b><span>Sunchon National University — April 2021</span></div>
+<div class="train"><b>Lab Safety Management System</b><span>Sunchon National University — April 2020</span></div>
+<div class="train"><b>Lab Safety Management System</b><span>Sunchon National University — March 2018</span></div>
+<div class="train"><b>Korean Language Course</b><span>Sunchon National University — July–August 2017</span></div>
+<div class="train"><b>Computer Training Course</b><span>Urban Social Services Coordination Council, Kushtia, Bangladesh — July–December 2010</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="contact">
+<p class="kicker">13</p><h2>Contact and Academic Profile</h2>
+<p class="intro">Connect for research collaboration, academic discussion, professional opportunities and technology-driven projects.</p>
+<div class="contact-grid">
+<div class="contact-item"><small>Name</small><span>Engr. Dr. A. B. M. Salman Rahman</span></div>
+<div class="contact-item"><small>Professional Title</small><span>Senior Project Manager | Researcher | Technology & Innovation Leader</span></div>
+<div class="contact-item"><small>Email</small><a href="mailto:salman01717@gmail.com">salman01717@gmail.com</a></div>
+<div class="contact-item"><small>Phone</small><a href="tel:+8801717581547">+880 1717 581547</a></div>
+<div class="contact-item"><small>ORCID</small><a href="https://orcid.org/0000-0003-4231-633X" target="_blank" rel="noopener">0000-0003-4231-633X</a></div>
+<div class="contact-item"><small>Google Scholar</small><a href="https://scholar.google.com/citations?user=bGxxC34AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a></div>
+<div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/engr-dr-a-b-m-salman-rahman-0857a614b" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+<div class="contact-item"><small>ResearchGate</small><a href="https://www.researchgate.net/profile/Rahman-Abm-Salman-Rahman" target="_blank" rel="noopener">ResearchGate Profile</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="profiles">
+<div class="container">
+<p class="kicker">14</p><h2>Academic Profiles</h2>
+<p class="intro">Explore my verified academic, research and professional profiles.</p>
+<div class="grid2">
+<article class="card"><h3>ORCID</h3><p>Persistent researcher identifier and publication record.</p><p style="margin-top:14px"><a href="https://orcid.org/0000-0003-4231-633X" target="_blank" rel="noopener" style="color:var(--blue);font-weight:800">View ORCID →</a></p></article>
+<article class="card"><h3>Google Scholar</h3><p>Research publications, citations and scholarly metrics.</p><p style="margin-top:14px"><a href="https://scholar.google.com/citations?user=bGxxC34AAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--blue);font-weight:800">View Google Scholar →</a></p></article>
+<article class="card"><h3>ResearchGate</h3><p>Research publications, projects and academic networking.</p><p style="margin-top:14px"><a href="https://www.researchgate.net/profile/Rahman-Abm-Salman-Rahman" target="_blank" rel="noopener" style="color:var(--blue);font-weight:800">View ResearchGate →</a></p></article>
+<article class="card"><h3>LinkedIn</h3><p>Professional experience, leadership and career profile.</p><p style="margin-top:14px"><a href="https://www.linkedin.com/in/dr-rahman-a-b-m-salman-0857a614b" target="_blank" rel="noopener">View LinkedIn →</a></p></article>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>© 2026 Engr. Dr. A. B. M. Salman Rahman • Academic & Professional Portfolio • All Rights Reserved.</footer>
+
+<style id="final-ui-fixes">
+:root{--navy:#082746;--blue:#1769d1;--sky:#23a8f2;--ink:#18344f;--muted:#617a92;--line:#dce7f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;overflow-x:hidden;background:#f7faff;color:var(--ink)}
+img{max-width:100%}
+
+/* Header: no clipped links */
+.site-header{
+  position:sticky!important;top:0;z-index:1000;
+  background:rgba(255,255,255,.97)!important;
+  border-bottom:1px solid #dbe5ee!important;
+  box-shadow:0 5px 20px rgba(8,39,70,.08);
+  backdrop-filter:blur(14px);
+}
+.site-header .navwrap{
+  min-height:64px!important;
+  height:auto!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  padding:10px 28px!important;
+  max-width:1500px!important;
+  margin:auto!important;
+}
+.brand{
+  flex:0 0 auto!important;
+  white-space:nowrap!important;
+  font-size:18px!important;
+  font-weight:900!important;
+  color:#0a2947!important;
+}
+.brand span{color:var(--blue)!important}
+.nav-toggle{
+  display:flex!important;align-items:center;gap:8px;
+  border:1px solid #d5e2ed;background:#fff;color:#0a2947;
+  padding:9px 14px;border-radius:10px;cursor:pointer;font-weight:800;font-size:11px;
+}
+.navlinks{
+  position:absolute!important;right:28px;top:62px;
+  display:none!important;flex-wrap:wrap;gap:7px!important;
+  width:min(760px,calc(100vw - 32px));
+  padding:14px!important;background:#fff;border:1px solid #dce7f0;
+  border-radius:16px;box-shadow:0 18px 50px rgba(8,39,70,.18);
+}
+.navlinks.open{display:flex!important}
+.navlinks a{
+  display:inline-flex!important;padding:8px 9px!important;border-radius:8px;
+  color:#24425d!important;font-size:10px!important;font-weight:800!important;
+  text-decoration:none!important;white-space:nowrap!important;
+}
+.navlinks a:hover{background:#edf6ff;color:var(--blue)!important}
+
+/* Hero is deliberately image-first */
+.hero{
+  padding:0 0 64px!important;
+  background:#071f3b!important;
+}
+.hero-banner{
+  width:100%!important;background:#071f3b!important;
+}
+.hero-banner img{
+  display:block!important;width:100%!important;height:auto!important;
+  max-height:none!important;object-fit:contain!important;
+}
+.hero-profile{
+  width:min(1120px,calc(100% - 36px))!important;
+  margin:-58px auto 0!important;
+  position:relative!important;z-index:4!important;
+  display:grid!important;
+  grid-template-columns:180px minmax(0,1fr) 285px!important;
+  align-items:center!important;gap:26px!important;
+  padding:24px 28px!important;
+  background:#fff!important;
+  border:1px solid #dfe9f1!important;
+  border-radius:22px!important;
+  box-shadow:0 25px 65px rgba(4,29,55,.26)!important;
+}
+.hero-profile-photo{
+  width:155px!important;height:155px!important;
+  display:block!important;margin:auto!important;
+  object-fit:cover!important;object-position:center top!important;
+  border-radius:18px!important;border:4px solid #fff!important;
+  box-shadow:0 12px 30px rgba(4,29,55,.18)!important;
+}
+.hero-profile-copy h1{font-size:clamp(30px,4vw,52px)!important;color:#092746!important}
+.hero-profile-copy h1 span{color:var(--blue)!important}
+.hero-profile-copy p{color:#5a7188!important}
+.hero-snapshot{background:#f4f8fc!important}
+
+/* Main sections */
+main section{scroll-margin-top:85px}
+.container{width:min(1280px,calc(100% - 44px))!important;margin:0 auto!important}
+section{padding-top:76px!important;padding-bottom:76px!important}
+section h2{letter-spacing:-.035em}
+.card{background:#fff!important;border:1px solid #dce7f0!important;box-shadow:0 8px 25px rgba(11,48,79,.04)!important}
+.card:hover{box-shadow:0 18px 42px rgba(11,48,79,.10)!important}
+
+/* Make the page look good at all widths */
+@media(max-width:1050px){
+  .hero-profile{grid-template-columns:145px minmax(0,1fr)!important}
+  .hero-profile-photo{width:130px!important;height:130px!important}
+  .hero-snapshot{grid-column:1/-1}
+}
+@media(max-width:700px){
+  .site-header .navwrap{padding:10px 14px!important}
+  .brand{font-size:16px!important}
+  .navlinks{right:14px;top:59px;width:calc(100vw - 28px)}
+  .hero-banner img{min-height:0!important}
+  .hero-profile{
+    width:calc(100% - 24px)!important;margin:-30px auto 0!important;
+    grid-template-columns:1fr!important;text-align:center!important;padding:20px!important;
+  }
+  .hero-profile-photo{width:125px!important;height:125px!important}
+  .hero-tags{justify-content:center!important}
+  .hero-snapshot{grid-column:auto;text-align:left}
+  .container{width:calc(100% - 28px)!important}
+  section{padding-top:56px!important;padding-bottom:56px!important}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn=document.querySelector('.nav-toggle');
+  const nav=document.querySelector('.navlinks');
+  if(btn && nav){
+    btn.addEventListener('click',()=>nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  }
+});
+</script>
+
+</body>
+</html>
